@@ -29,7 +29,7 @@ To get a local copy up and running follow these simple steps.
 
 - Java JDK 17
 - Maven
-- 
+  
 ### Installation
 
 1. Clone the repo
