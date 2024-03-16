@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Delivery Fee Calculator</title>
+</head>
+<body>
+  <h1>Delivery Fee Calculator</h1>
+  <form action="#" th:action="@{/calculate}" method="post">
+    <label for="city">City:</label>
+    <select id="city" name="city">
+      <option value="Tallinn">Tallinn</option>
+      <option value="Tartu">Tartu</option>
+      <option value="Pärnu">Pärnu</option>
+    </select>
+
+    <label for="vehicleType">Vehicle Type:</label>
+    <select id="vehicleType" name="vehicleType">
+      <option value="Car">Car</option>
+      <option value="Scooter">Scooter</option>
+      <option value="Bike">Bike</option>
+    </select>
+
+    <button type="submit">Calculate Fee</button>
+  </form>
+
+  <!-- Error message display -->
+  <div th:if="${errorMessage}">
+      <h2 th:text="${errorMessage}"></h2>
+  </div>
+
+  <!-- Fee display -->
+  <div th:if="${fee}">
+    <h2>Total Delivery Fee: <span th:text="${fee}"></span> €</h2>
+  </div>
+</body>
+</html>
